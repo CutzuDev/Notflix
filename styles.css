@@ -248,6 +248,11 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 300ms ease;
+}
+
+.movie--container:hover {
+  transform: scale(1.05);
 }
 
 .movie__contents {
