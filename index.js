@@ -10,15 +10,15 @@ async function searchBarInput(event) {
   const movie = await fetch(
     `https://www.omdbapi.com/?apikey=50f9e55e&s=${inputValue}`
   );
-  const movieData = await movie.json();
-  if (!movieData.Search) {
+  const moviesData = await movie.json();
+  if (!moviesData.Search) {
     moviesContainerEl.style.display = "none";
     defaultContainerEl.style.display = "block";
-  } else if (movieData.Search) {
+  } else if (moviesData.Search) {
     moviesContainerEl.style.display = "flex";
     defaultContainerEl.style.display = "none";
   }
-  moviesContainerEl.innerHTML = movieData.Search.slice(0, 9)
+  moviesContainerEl.innerHTML = moviesData.Search.slice(0, 9)
     .map((movie) => moviesHTML(movie))
     .join("");
 }
