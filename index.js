@@ -9,7 +9,7 @@ const defaultContainerEl = document.querySelector(".default__container");
 async function searchBarInput(event) {
   const inputValue = event.target.value;
   const movie = await fetch(
-    `http://www.omdbapi.com/?apikey=50f9e55e&s=${inputValue}`
+    `https://www.omdbapi.com/?apikey=50f9e55e&s=${inputValue}`
   );
   const movieData = await movie.json();
   if (!movieData.Search) {
