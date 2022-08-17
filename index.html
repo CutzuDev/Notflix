@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Home - Notflix</title>
+    <script
+      src="https://kit.fontawesome.com/492fd5106e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <section id="landing-page" class="placeholder">
+      <nav>
+        <div class="navbar__row">
+          <div class="navbar__left">
+            <figure class="navbar__img--container">
+              <img src="./assets/notflixlogo.png" class="navbar__img" />
+            </figure>
+            <ul class="navbar__list nlvar__1">
+              <li class="navbar__item item__text nav__anim--active">Home</li>
+              <li class="navbar__item item__text nav__anim--active">
+                TV Shows
+              </li>
+              <li class="navbar__item item__text nav__anim--active">Movies</li>
+              <li class="navbar__item item__text nav__anim--active">
+                New & Popular
+              </li>
+              <li class="navbar__item item__text nav__anim--active">My List</li>
+              <li class="navbar__item item__text nav__anim--active">
+                Browse by Languages
+              </li>
+            </ul>
+          </div>
+          <div class="navbar__right">
+            <ul class="navbar__list">
+              <li class="navbar__item item__icon seach__bar--ref">
+                <div class="search__bar--container">
+                  <i
+                    class="fa-solid fa-magnifying-glass search__icon"
+                    onclick="searchBarActive()"
+                  ></i>
+                  <input
+                    type="text"
+                    class="search__bar--input"
+                    placeholder="Movie Name"
+                    onchange="searchBarInput(event)"
+                  />
+                </div>
+              </li>
+              <li class="navbar__item item__text nav__anim--active">Kids</li>
+              <li class="navbar__item item__icon">
+                <i class="fa-solid fa-bell"></i>
+              </li>
+              <li class="account__item">
+                <img src="./assets/me.png" class="account__img" />
+                <img
+                  src="./assets/arrow__menu.png"
+                  class="account__menu--arrow"
+                />
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <header class="header">
+        <div class="movies__container"></div>
+        <div class="default__container">
+          <h1 class="notflix__empty--title">
+            <span class="text--red">Notflix</span>
+          </h1>
+          <h3 class="notflix__empty--desc">
+            Notflix is the best movie search website because it is the most
+            comprehensive and user-friendly site available. Notflix has an
+            extensive database of movies, making it easy to find the right film
+            for you.
+          </h3>
+          <div class="notflix__empty--but-container">
+            <button class="notflix__empty--but nebvar__1">
+              <i class="fa-solid fa-play"></i>Play
+            </button>
+            <button class="notflix__empty--but nebvar__2">
+              <i class="fa-solid fa-info"></i>More Info
+            </button>
+          </div>
+        </div>
+      </header>
+    </section>
+  </body>
+</html>
+
+<!-- <div class="movie--container">
+  <div class="movie__contents">
+    <div class="movie__poster"></div>
+    <div class="movie__info--container">
+      <div class="movie__title"></div>
+      <div class="movie__year"></div>
+    </div>
+  </div>
+</div> -->

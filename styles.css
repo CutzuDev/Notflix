@@ -1,0 +1,390 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li {
+  cursor: default;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#landing-page {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.placeholder {
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-color: #101010;
+  background-image: url("./assets/NotflixBg.png");
+}
+
+/* .color__1 {
+    background-color: aqua;
+} */
+.color__2 {
+  background-color: red;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.7) 10%,
+    transparent
+  );
+  z-index: 9999;
+}
+
+.navbar__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.navbar__img--container {
+  width: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__img {
+  width: 100%;
+}
+
+.navbar__left {
+  display: flex;
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+}
+
+.account__img {
+  width: 35px;
+  border-radius: 5px;
+}
+
+.account__item {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.account__menu--arrow {
+  width: 10px;
+  height: 15px;
+  margin: 0px 10px;
+  transform: rotate(180deg);
+}
+
+.item__text {
+  color: #fff;
+  font-weight: 500;
+  transition: 300ms all ease;
+}
+.item__text:hover {
+  filter: brightness(0.8);
+}
+
+.item__icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.navbar__item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.navbar__item:hover {
+  cursor: pointer;
+}
+
+.nav__anim--active:active {
+  transform: scale(0.95);
+}
+
+.nlvar__1 {
+  margin-left: 50px;
+}
+
+.seach__bar--ref {
+  height: 100%;
+}
+
+.search__bar--container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: 500ms all ease;
+  background-color: transparent;
+  border: 0px transparent;
+  padding: 5px 5px;
+}
+
+.search__bar--input {
+  width: 0px;
+  visibility: hidden;
+  transition: 500ms all ease;
+  text-align: start;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  caret-color: #f8f8f8;
+}
+
+.search__bar--input:focus,
+input:focus {
+  outline: none;
+  color: #fff;
+}
+
+input {
+  color: #fff;
+}
+
+.search__bar--input::placeholder {
+  color: #f8f8f8;
+}
+
+.search__icon {
+  transition: 100ms all ease;
+}
+
+.sbActive .search__bar--input {
+  width: 180px;
+  visibility: visible;
+}
+
+.sbActive .search__icon {
+  margin-right: 20px;
+  padding-top: 2px;
+  padding-left: 2px;
+}
+
+.sbActive .search__bar--container {
+  background-color: rgba(36, 36, 36, 0.5);
+  border: 1px solid #f8f8f8;
+  padding: 5px;
+  margin-left: -200px;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 80px);
+  bottom: 0;
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movies__container {
+  width: 100%;
+  height: 100%;
+  margin: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 20px 20px 70px;
+  background-color: rgba(36, 36, 36, 0.25);
+  box-shadow: 0px 0px 20px rgba(36, 36, 36, 0.5);
+  border-radius: 20px;
+  display: none;
+}
+
+.movie--container {
+  width: calc(100% / 3);
+  height: 200px;
+  padding: 20px;
+  padding-right: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie__contents {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 30px rgba(36, 36, 36, 0.5);
+  border-radius: 12.5px;
+  overflow: hidden;
+}
+.movie__poster {
+  height: 100%;
+  width: 30%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.movie__info--container {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie__title {
+  height: min-content;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(36, 36, 36, 1);
+  border-top-right-radius: 10px;
+  font-size: 24px;
+  color: #f8f8f8;
+  backdrop-filter: blur(10px);
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 2.5px 5px rgba(219, 32, 44, 0.5);
+  padding: 10px;
+  text-align: center;
+}
+
+.movie__year {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(145deg, #200000 0%, #242424 100%);
+  border-bottom-right-radius: 10px;
+  font-size: 24px;
+  text-align: center;
+  color: #db202c;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-shadow: 0px 0px 5px rgba(219, 32, 44, 0.5);
+}
+
+.movie__year:hover {
+  cursor: default;
+}
+.movie__title:hover {
+  cursor: default;
+}
+
+.movie__poster--img {
+  width: 100%;
+  height: 100%;
+}
+
+.text--red {
+  color: #ad212a;
+}
+
+.default__container {
+  width: 100%;
+  height: 120%;
+  background-color: rgba(36, 36, 36, 0.4);
+  padding: 100px 80px;
+  top: -100px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.notflix__empty--title {
+  margin-top: 180px;
+  font-size: 100px;
+  height: min-content;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.notflix__empty--desc {
+  font-size: 26px;
+  max-width: 600px;
+  margin-top: 40px;
+  color: #f8f8f8;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+.notflix__empty--but {
+  padding: 14px 48px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.notflix__empty--but:hover {
+  cursor: not-allowed;
+}
+
+.fa-play {
+  margin-right: 10px;
+}
+.fa-info {
+  margin-right: 10px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notflix__empty--but:not(:last-child) {
+  margin-right: 20px;
+}
+
+.notflix__empty--but-container {
+  margin-top: 40px;
+  display: flex;
+}
+
+.nebvar__2 {
+  background-color: rgba(36, 36, 36, 0.5);
+  color: #f8f8f8;
+}
