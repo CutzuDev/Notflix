@@ -18,20 +18,44 @@
       <nav>
         <div class="navbar__row">
           <div class="navbar__left">
-            <figure class="navbar__img--container">
+            <figure class="navbar__img--container" onclick="goBack()">
               <img src="./assets/notflixlogo.png" class="navbar__img" />
             </figure>
             <ul class="navbar__list nlvar__1">
-              <li class="navbar__item item__text nav__anim--active">Home</li>
-              <li class="navbar__item item__text nav__anim--active">
+              <li
+                class="navbar__item item__text nav__anim--active no__cursor"
+                onclick="nAlert()"
+              >
+                Home
+              </li>
+              <li
+                class="navbar__item item__text nav__anim--active no__cursor"
+                onclick="nAlert()"
+              >
                 TV Shows
               </li>
-              <li class="navbar__item item__text nav__anim--active">Movies</li>
-              <li class="navbar__item item__text nav__anim--active">
+              <li
+                class="navbar__item item__text nav__anim--active no__cursor"
+                onclick="nAlert()"
+              >
+                Movies
+              </li>
+              <li
+                class="navbar__item item__text nav__anim--active no__cursor"
+                onclick="nAlert()"
+              >
                 New & Popular
               </li>
-              <li class="navbar__item item__text nav__anim--active">My List</li>
-              <li class="navbar__item item__text nav__anim--active">
+              <li
+                class="navbar__item item__text nav__anim--active no__cursor"
+                onclick="nAlert()"
+              >
+                My List
+              </li>
+              <li
+                class="navbar__item item__text nav__anim--active no__cursor"
+                onclick="nAlert()"
+              >
                 Browse by Languages
               </li>
             </ul>
@@ -52,11 +76,16 @@
                   />
                 </div>
               </li>
-              <li class="navbar__item item__text nav__anim--active">Kids</li>
-              <li class="navbar__item item__icon">
+              <li
+                class="navbar__item item__text nav__anim--active no__cursor"
+                onclick="nAlert()"
+              >
+                Kids
+              </li>
+              <li class="navbar__item item__icon" onclick="nAlert()">
                 <i class="fa-solid fa-bell"></i>
               </li>
-              <li class="account__item">
+              <li class="account__item no__cursor" onclick="nAlert()">
                 <img src="./assets/me.png" class="account__img" />
                 <img
                   src="./assets/arrow__menu.png"
@@ -68,6 +97,10 @@
         </div>
       </nav>
       <header class="header">
+        <div class="goBack" onclick="goBack()">
+          <i class="fa-solid fa-arrow-left"></i>
+          <h3 class="goBack__text">Go Back</h3>
+        </div>
         <div class="movies__container"></div>
         <div class="default__container">
           <h1 class="notflix__empty--title">
@@ -79,14 +112,18 @@
             extensive database of movies, making it easy to find the right film
             for you.
           </h3>
-          <div class="notflix__empty--but-container">
-            <button class="notflix__empty--but nebvar__1">
-              <i class="fa-solid fa-play"></i>Play
+          <form class="notflix__empty--search" onsubmit="return false;">
+            <input
+              type="text"
+              class="notflix__empty--input"
+              placeholder="Movie Name"
+              onchange="searchBarInput(event)"
+              autofocus
+            />
+            <button class="btn__submit" type="submit">
+              <i class="fa-solid fa-magnifying-glass nei__search"></i>
             </button>
-            <button class="notflix__empty--but nebvar__2">
-              <i class="fa-solid fa-info"></i>More Info
-            </button>
-          </div>
+          </form>
         </div>
       </header>
     </section>
